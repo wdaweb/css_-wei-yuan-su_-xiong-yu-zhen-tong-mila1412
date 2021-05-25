@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .syringe {
+      width: 450px;
+      height: 110px;
+      border: solid gray 1px;
+      position: relative;
+      background: linear-gradient(rgba(0, 0, 0, 0.04) 10%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.15)60%, rgba(0, 0, 0, 0.04) 90%)
+    }
+
+    .syringe::before {
+      position: absolute;
+      content: '';
+      width: 50%;
+      height: 110px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(rgba(0, 0, 0, 0.05) 10%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.15)60%, rgba(0, 0, 0, 0.05) 90%),
+        rgb(255, 255, 172);
+    }
+
+    .syringe::after {
+      position: absolute;
+      content: '';
+      width: 45px;
+      height: 111px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: black;
+    }
+
+    .side {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .side::before {
+      position: absolute;
+      content: '';
+      width: 52px;
+      height: 73px;
+      border-top-right-radius: 10%;
+      border-bottom-right-radius: 10%;
+      border: solid gray 1px;
+      transform: translateY(-50%);
+      top: 50%;
+      left: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.02) 10%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.15)60%, rgba(0, 0, 0, 0.02) 90%)
+    }
+
+    .side::after {
+      position: absolute;
+      content: '';
+      width: 52px;
+      height: 73px;
+      border: solid gray 1px;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.02) 10%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.15)60%, rgba(0, 0, 0, 0.02) 90%)
+    }
+
+    .head {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    .head::before {
+      position: absolute;
+      content: '';
+      width: 90px;
+      height: 1px;
+      background: gray;
+      left: calc(100% + 54px);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .head::after {
+      position: absolute;
+      content: '';
+      width: 45px;
+      height: 100%;
+      border: solid gray 1px;
+      background: linear-gradient(rgba(0, 0, 0, 0.02) 10%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.15)60%, rgba(0, 0, 0, 0.02) 90%);
+      right: calc(100% + 54px);
+    }
+
+    .text {
+      display: flex;
+      align-items: flex-end;
+      height: 100%;
+      color: rgb(168, 168, 168);
+    }
+
+    .scale {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      /* margin: auto; */
+      background-image: repeating-linear-gradient(90deg, black 0, black 1px, transparent 0, transparent 15px);
+      background-position: 15px 0;
+      background-repeat: no-repeat;
+      background-size: 100% 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="syringe">
+    <div class="side"></div>
+    <div class="head"></div>
+    <div class="text">Made in Taiwan</div>
+    <div class="scale"></div>
+  </div>
+</body>
+
+</html>

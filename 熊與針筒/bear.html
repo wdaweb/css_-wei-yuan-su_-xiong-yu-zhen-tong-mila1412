@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .bear {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: black;
+    }
+
+    .bear::before {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: red;
+      left: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .bear::after {
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: red;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .eye {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .eye::before {
+      position: absolute;
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: solid white 10px;
+      top: 20%;
+      left: 30%;
+      transform: translateX(-50%);
+    }
+
+    .eye::after {
+      position: absolute;
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: solid white 10px;
+      top: 20%;
+      left: 70%;
+      transform: translateX(-50%);
+    }
+
+    .ear {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .ear::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      border: solid black 10px;
+      top: -3%;
+      left: 20%;
+      transform: translateX(-50%);
+    }
+
+    .ear::after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: white;
+      border-radius: 50%;
+      border: solid black 10px;
+      top: -3%;
+      left: 80%;
+      transform: translateX(-50%);
+    }
+
+    .nose {
+      position: absolute;
+      top: 38%;
+      right: 0;
+      left: 0;
+      margin: auto;
+      background: white;
+      width: 130px;
+      height: 95px;
+      border-radius: 50%;
+    }
+
+    .nose::before {
+      position: absolute;
+      content: '';
+      width: 33px;
+      height: 22px;
+      border-radius: 50%;
+      background: black;
+      top: 9%;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .nose::after {
+      position: absolute;
+      content: '';
+      width: 85px;
+      height: 30px;
+      border-radius: 50%;
+      background: black;
+      top: 48%;
+      left: 50%;
+      transform: translateX(-50%)
+    }
+
+    .v {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+    }
+
+    .v::before {
+      position: absolute;
+      content: '';
+      top: 78%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 0px;
+      border-top: 40px solid white;
+      border-right: 50px solid transparent;
+      border-left: 50px solid transparent;
+    }
+
+    .v::after {
+      position: absolute;
+      content: '';
+      top: 73%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0px;
+      height: 0px;
+      border-top: 40px solid black;
+      border-right: 50px solid transparent;
+      border-left: 50px solid transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bear">
+    <div class="eye"></div>
+    <div class="ear"></div>
+    <div class="nose"></div>
+    <div class="v"></div>
+  </div>
+</body>
+
+</html>
